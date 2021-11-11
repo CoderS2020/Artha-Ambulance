@@ -5,6 +5,7 @@ import Ambulance from "./Pages/Ambulance";
 import Services from "./Pages/Services";
 import Corporate from "./Pages/Corporate";
 import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
 
 export default function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ export default function AppRoutes() {
         <Route path="/services" exact element={<Services />} />
         <Route path="/corporate" exact element={<Corporate />} />
         <Route path="/blog" exact element={<Blog />} />
+        <Route path="/contact" exact element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
