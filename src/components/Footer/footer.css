@@ -1,0 +1,214 @@
+.footer {
+  background: url("./assets/Landing\ Page\ -\ 3.jpg") no-repeat center center;
+  background-size: cover;
+  /* height: 100px; */
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway";
+  /* transition: none !important; */
+}
+
+.text {
+  color: black;
+  display: flex;
+  width: 100%;
+  /* justify-content: space-evenly; */
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.border-left {
+  border-left: 1.5px solid;
+}
+.pl-3 {
+  min-width: 70px;
+}
+.text span {
+  margin-left: 10px;
+}
+.p-31 {
+  padding: 0.7rem !important;
+  /* width: 14%; */
+  width: 20%;
+  min-width: 80px;
+
+  color: white;
+}
+.c-pl-1 {
+  /* width: 23%; */
+  width: 18%;
+  min-width: 120px;
+}
+.c-p-0 {
+  /* justify-content: end; */
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.text1 {
+  /* font-size: 21px; */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.text1 span {
+  margin-left: 10px;
+}
+.p-3 {
+  padding: 0.7rem !important;
+  /* justify-content: end; */
+  width: 100%;
+}
+.p-32 {
+  width: 28%;
+  min-width: 130px;
+}
+.p-32 span {
+  /* font-size: 20px; */
+  font-size: 18px;
+}
+.text-left span {
+  margin-left: 5px;
+}
+.h-50 {
+  /* justify-content: end; */
+  justify-content: center;
+  padding: 10px;
+}
+.content {
+  font-size: 20px;
+}
+.reveal-text {
+  visibility: hidden;
+}
+.font1 {
+  text-align: start;
+  font-family: "Coda";
+}
+.line {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+.font {
+  margin-left: 10px;
+  /* width: 80%; */
+  width: 100%;
+}
+.text:hover,
+.text1:hover {
+  text-decoration: none;
+  color: white;
+  transform: scale(1.08);
+  transition: 1s;
+}
+
+.background {
+  background: url("./assets/Landing\ Page\ -\ 3.jpg") no-repeat center center;
+  background-size: cover;
+  max-width: 100%;
+  transition: none !important;
+  font-family: "Raleway";
+  /* height: 250px; */
+}
+
+@media screen and (max-width: 1060px) {
+  .text {
+    /* font-size: 19px; */
+    font-size: 18px;
+  }
+
+  .text span {
+    margin-left: 6px;
+  }
+  .pl-3,
+  .px-3 {
+    /* padding-left: 0rem!important; */
+    padding-left: 1.5rem !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .p-31 {
+    width: 20%;
+  }
+  .text1 {
+    font-size: 18px;
+    width: 100%;
+  }
+  .c-pl-1 {
+    width: 22%;
+  }
+}
+@media screen and (max-width: 680px) {
+  .p-31 {
+    width: 20%;
+  }
+  .text,
+  .text1 {
+    font-size: 15px;
+    width: 100%;
+  }
+  .c-pl-1 {
+    width: 24%;
+  }
+  .c-p-0 {
+    justify-content: center;
+  }
+  .p-32 {
+    width: 31%;
+  }
+  .font {
+    margin-left: 0px;
+  }
+  .font1 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .p-31 {
+    width: 26%;
+  }
+  .font {
+    font-size: 15px;
+  }
+  .p-32 {
+    width: 35%;
+  }
+  .p-32 span {
+    font-size: 16.5px;
+  }
+  .h-50 {
+    justify-content: center;
+  }
+  .pl-3,
+  .px-3 {
+    padding-left: 0px;
+  }
+  .text1 {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .p-31 {
+    /* width: 32.5%; */
+    width: 40.5%;
+  }
+  .p-32 {
+    width: 40%;
+  }
+  .text {
+    font-size: 15.5px;
+  }
+  .font {
+    font-size: 14px;
+  }
+  .text1 {
+    width: 100%;
+  }
+}
