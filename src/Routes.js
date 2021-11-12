@@ -1,15 +1,18 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Ambulance from "./Pages/Ambulance";
-import Services from "./Pages/Services";
-import Corporate from "./Pages/Corporate";
-import Blog from "./Pages/Blog";
-import Contact from "./Pages/Contact";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Ambulance from './Pages/Ambulance';
+import Services from './Pages/Services';
+import Corporate from './Pages/Corporate';
+import Blog from './Pages/Blog';
+import Contact from './Pages/Contact';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function AppRoutes() {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/about" exact element={<About />} />
@@ -19,6 +22,7 @@ export default function AppRoutes() {
         <Route path="/blog" exact element={<Blog />} />
         <Route path="/contact" exact element={<Contact />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

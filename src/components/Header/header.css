@@ -1,5 +1,5 @@
 .fontSetter {
-  font-family: "Raleway";
+  font-family: 'Raleway';
 }
 
 .headerLogo {
@@ -15,7 +15,6 @@
 
 .arthaLogo {
   max-width: 80px;
-  padding-top: 7px;
   margin-left: 9px;
 }
 
