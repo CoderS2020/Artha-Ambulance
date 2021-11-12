@@ -148,12 +148,12 @@ export default function Contact() {
                 <h1 class="header-widget">Twitter Feed</h1>
                 <ul>
                     <li>
-                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>5 Reasons You Should Take a Sabbatical from Creative Work  <span>- AUG 10</span></p></a>
+                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>The best investment you will ever make is on your health</p></a>
                         {/* <!-- <p>5 Reasons You Should Take a Sabbatical from Creative Work  <span>- AUG 10</span></p> --> */}
                     </li>
 
                     <li>
-                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>What is the enemy of  <span>- AUG 5</span></p></a>
+                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>We are just a phone call away</p></a>
                         {/* <!-- <p>What is the enemy of  <span>- AUG 5</span></p> --> */}
                         </li>
                     </ul>
@@ -226,7 +226,7 @@ export default function Contact() {
                     <div class="form-group">
                         <label for="number">Phone <sup>*</sup></label>
                         <br />
-                        <input type="number" name="number"  id="number" class="input-lg round form-control"   required aria-required="true" />
+                        <input type="number" name="number" id="number" class="input-lg round form-control"   required aria-required="true" />
                     </div>
 
                     <div class="form-group">
@@ -258,7 +258,7 @@ export default function Contact() {
 
 
         <div class="google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15537.698601445501!2d77.7065928!3d13.1986348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x296c70e9a129418e!2sKempegowda%20International%20Airport%20Bengaluru!5e0!3m2!1sen!2sin!4v1630491744519!5m2!1sen!2sin" width="100%" height="500px" style={{border:0}} allowfullscreen="" title="map" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31116.323207680332!2d77.5862605554176!3d12.872934456202312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6ad428686a95%3A0x9f834702fb64489e!2sHulimavu%2C%20Bengaluru%2C%20Karnataka%20560076!5e0!3m2!1sen!2sin!4v1636726787598!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} allowfullscreen="" title="mapas" loading="lazy"></iframe>
         </div>
     </>
   );
