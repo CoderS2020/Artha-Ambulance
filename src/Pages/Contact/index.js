@@ -1,12 +1,21 @@
 import React from 'react'
-import LandingPage from './images/Landing-Page.jpg'
-import Banner from './images/Banner-3.jpg'
-import './contact-style.css'
+import LandingPage from './images/Landing-Page.jpg';
+import Banner from './images/Banner-3.jpg';
+import ThankYou from './images/t.jpg';
+import './contact-style.css';
+
+function importAll(r){
+    return r.keys().map(r);
+}
+
+const LinkedInFeed=importAll(require.context('./images/Follow Us/Linkedin/',false,/\.(svg|png|jpe?g|svg|jpg)$/));
+const FacebookFeed=importAll(require.context('./images/Follow Us/Facebook/',false,/\.(svg|png|jpe?g|svg|jpg)$/));
+const InstagramFeed=importAll(require.context('./images/Follow Us/Instagram/',false,/\.(svg|png|jpe?g|svg|jpg)$/));
 
 export default function Contact() {
   return (
     <>
-      <section class="page-section bg-dark-alfa-50 bg-scroll" style={{backgroundImage: `url${LandingPage}`}} >
+      <section class="page-section bg-dark-alfa-50 bg-scroll" style={{backgroundImage: `url(${LandingPage})`}} >
             <div class="containers relative">
                 <div class="row">
                     <div class="col-md-8">
@@ -28,7 +37,7 @@ export default function Contact() {
 
 
 
-        <div class="select" style={{backgroundImage: `url${Banner}`}}>
+        <div class="select" style={{backgroundImage: `url(${Banner})`}}>
             <h1>CONTACT US</h1>
         </div>
 
@@ -108,7 +117,7 @@ export default function Contact() {
 
 
 
-        <div class="selecting" style={{backgroundImage: `url${Banner}`}}>  
+        <div class="selecting" style={{backgroundImage: `url(${Banner})`}}>  
             <h1>FOLLOW US</h1>
         </div>
 
@@ -121,12 +130,17 @@ export default function Contact() {
                 <h1 class="header-widget">Instagram Feed</h1>
 
                 <ul>
-                    <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Ambulance Sirens.jpg" alt="Instagram Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    {
+                        InstagramFeed.map(image =>{
+                            return <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src={image.default} alt="Instagram Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                        })
+                    }
+                    {/* <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Ambulance Sirens.jpg" alt="Instagram Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Doc in Ambulance.jpg" alt="Instagram Image2" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Doc in OT.jpg" alt="Instagram Image3" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Heart on a book.jpg" alt="Instagram Image4" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Inside Ambulance.jpg" alt="Instagram Image5" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
-                    <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/IV Bag 2.jpg" alt="Instagram Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    <li><a href="https://www.instagram.com/artha_ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/IV Bag 2.jpg" alt="Instagram Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li> */}
                 </ul>
             </div>
 
@@ -134,12 +148,12 @@ export default function Contact() {
                 <h1 class="header-widget">Twitter Feed</h1>
                 <ul>
                     <li>
-                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>5 Reasons You Should Take a Sabbatical from Creative Work  <span>- AUG 10</span></p></a>
+                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>The best investment you will ever make is on your health</p></a>
                         {/* <!-- <p>5 Reasons You Should Take a Sabbatical from Creative Work  <span>- AUG 10</span></p> --> */}
                     </li>
 
                     <li>
-                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>What is the enemy of  <span>- AUG 5</span></p></a>
+                        <a href="https://twitter.com/AmbulanceArtha" target="_blank" class="twitter" rel="noreferrer"><i class="fa fa-twitter"></i><p>We are just a phone call away</p></a>
                         {/* <!-- <p>What is the enemy of  <span>- AUG 5</span></p> --> */}
                         </li>
                     </ul>
@@ -149,12 +163,17 @@ export default function Contact() {
                 <h1 class="header-widget">LinkedIn Feed</h1>
 
                 <ul>
-                    <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/IV Bag.jpg" alt="LinkedIn Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    {
+                        LinkedInFeed.map(image=>{
+                            return <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src={image.default} alt="linkedin" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                        })
+                    }
+                    {/* <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/IV Bag.jpg" alt="LinkedIn Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Mask and Sanitizer.jpg" alt="LinkedIn Image2" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/medical-staff-with-stethoscope.jpg" alt="LinkedIn Image3" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/medical-test.jpg" alt="LinkedIn Image4" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Monitor.jpg" alt="LinkedIn Image5" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
-                    <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Oxygen Mask.jpg" alt="LinkedIn Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    <li><a href="https://www.linkedin.com/company/artha-ambulance/" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Oxygen Mask.jpg" alt="LinkedIn Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li> */}
                 </ul>
             </div>
 
@@ -162,12 +181,17 @@ export default function Contact() {
                 <h1 class="header-widget">Facebook Feed</h1>
 
                 <ul>
-                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Paramedics are always there to help.jpg" alt="Facebook Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
-                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Plus Sign.jpg" alt="Facebook Image2" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
-                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Rushing Ambulance.jpg" alt="Facebook Image3" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    {
+                        FacebookFeed.map(image=>{
+                            return <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src={image.default} alt="Facebook Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                        })
+                    }
+                    {/* <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="./images/Follow Us/Paramedics are always there to help.jpg" alt="Facebook Image1" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="./images/Follow Us/Plus Sign.jpg" alt="Facebook Image2" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="./images/Follow Us/Rushing Ambulance.jpg" alt="Facebook Image3" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Side Stand.jpg" alt="Facebook Image4" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
                     <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Stay home.jpg" alt="Facebook Image5" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
-                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Stethoscope - 2.jpg" alt="Facebook Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li>
+                    <li><a href="https://www.facebook.com/Arthaambulance" class="gallery-widget-lightbox" target="_blank" rel="noreferrer"><img src="images/Follow Us/Stethoscope - 2.jpg" alt="Facebook Image6" /><div class="hover-link"><span class="linea-arrows-plus"></span></div></a></li> */}
                 </ul>
             </div>
         </div>
@@ -176,7 +200,7 @@ export default function Contact() {
 
 
 
-        <div class="selecting" style={{backgroundImage: `url${Banner}`}}>  
+        <div class="selecting" style={{backgroundImage: `url(${Banner})`}}>  
             <h1>TELL US</h1>
         </div>
 
@@ -202,7 +226,7 @@ export default function Contact() {
                     <div class="form-group">
                         <label for="number">Phone <sup>*</sup></label>
                         <br />
-                        <input type="number" name="number"  id="number" class="input-lg round form-control"   required aria-required="true" />
+                        <input type="number" name="number" id="number" class="input-lg round form-control"   required aria-required="true" />
                     </div>
 
                     <div class="form-group">
@@ -219,7 +243,7 @@ export default function Contact() {
                 </div>
                 
                 <div class="usimg">
-                    <img src="images/t.jpg" alt="image0"/>
+                    <img src={ThankYou} alt="image0"/>
                 </div>
             </div>
         </form>
@@ -227,14 +251,14 @@ export default function Contact() {
 
               
 
-        <div class="selecting headquarter" style={{backgroundImage: `url${Banner}`}}>  
+        <div class="selecting headquarter" style={{backgroundImage: `url(${Banner})`}}>  
             <h1>Company Headquarters</h1>
         </div>
 
 
 
         <div class="google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15537.698601445501!2d77.7065928!3d13.1986348!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x296c70e9a129418e!2sKempegowda%20International%20Airport%20Bengaluru!5e0!3m2!1sen!2sin!4v1630491744519!5m2!1sen!2sin" width="100%" height="500px" style={{border:0}} allowfullscreen="" title="map" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31116.323207680332!2d77.5862605554176!3d12.872934456202312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6ad428686a95%3A0x9f834702fb64489e!2sHulimavu%2C%20Bengaluru%2C%20Karnataka%20560076!5e0!3m2!1sen!2sin!4v1636726787598!5m2!1sen!2sin" width="100%" height="450" style={{border:0}} allowfullscreen="" title="mapas" loading="lazy"></iframe>
         </div>
     </>
   );

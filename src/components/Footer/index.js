@@ -37,7 +37,7 @@ const Footer = () => {
                   <i className="far fa-map display-block1"></i>
                   <span className="">ADDRESS</span>
                 </div>
-                <p className="font1">Bengaluru , KA , INDIA</p>
+                <p className="font1">Hulimavu, Bengaluru, Karnataka, IN</p>
               </div>
             </div>
 
