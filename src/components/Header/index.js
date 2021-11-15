@@ -94,6 +94,15 @@ const Header = () => {
             <li className="nav-item p-3">
               <Link
                 className="nav-link headerLinks"
+                to="/gallery"
+                style={{ color: '#595959' }}
+              >
+                Gallery
+              </Link>
+            </li>
+            <li className="nav-item p-3">
+              <Link
+                className="nav-link headerLinks"
                 to="/contact"
                 style={{ color: '#595959' }}
               >

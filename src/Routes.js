@@ -6,6 +6,7 @@ import Services from './Pages/Services';
 import Corporate from './Pages/Corporate';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
+import Gallery from './Pages/Gallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -21,6 +22,7 @@ export default function AppRoutes() {
         <Route path="/corporate" exact element={<Corporate />} />
         <Route path="/blog" exact element={<Blog />} />
         <Route path="/contact" exact element={<Contact />} />
+        <Route path="/gallery" exact element={<Gallery />} />
       </Routes>
       <Footer />
     </BrowserRouter>
