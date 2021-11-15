@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css';
-import cardImage from './assets/1.jpg';
-import cardImage2 from './assets/2.jpeg';
+import cardImage from './assets/One.jpg';
+import cardImage2 from './assets/Two.jpg';
 import TwentyFourHrs from './assets/24Hours.jpg';
 import Equipped from './assets/Equipped.jpg';
 import Quality from './assets/Quality.jpg';
@@ -56,7 +56,10 @@ const Home = () => {
         <div class="row">
           <div class="col">
             <br />
-            <p class="d-flex font-weight-normal para" style={{ width: '100%' }}>
+            <p
+              class="d-flex font-weight-normal para"
+              style={{ width: '100%', textAlign: 'left' }}
+            >
               A team you can trust.
               <br />
               <br />
@@ -76,7 +79,7 @@ const Home = () => {
           </div>
 
           <div class="col">
-            <div class="d-flex" style={{ justifyContent: 'flex-end' }}>
+            <div class="d-flex" style={{ width: '100%' }}>
               <img class="p-6 mt-2" src={cardImage2} alt="img" />
             </div>
           </div>
