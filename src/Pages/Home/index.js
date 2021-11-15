@@ -17,7 +17,12 @@ const Home = () => {
             <div class="col">
               <h1
                 class="font-weight-normal heading"
-                style={{ fontFamily: 'Raleway' }}
+                style={{
+                  fontFamily: 'Raleway',
+                  textAlign: 'left',
+                  fontSize: '80px',
+                  color: 'red',
+                }}
               >
                 ARTHA AMBULANCE
               </h1>
@@ -27,7 +32,12 @@ const Home = () => {
               >
                 Never Lose Hope!
               </h3>
-              <h4 class="text-dark smalltext">We are just a phone call away</h4>
+              <h4
+                class="text-dark smalltext"
+                style={{ fontFamily: 'Poppins,sans-serif' }}
+              >
+                We are just a phone call away
+              </h4>
               <button
                 type="button"
                 class="btn font-weight-bold button"
@@ -100,7 +110,10 @@ const Home = () => {
                 src={TwentyFourHrs}
                 class="img-responsive mx-auto d-block imglogo"
               />
-              <div class="container" style={{ marginTop: '30px' }}>
+              <div
+                class="container"
+                style={{ marginTop: '30px', flexDirection: 'column' }}
+              >
                 <h4 class="font-weight-normal text-dark text-left logohead">
                   24 Hour Service - When seconds count, we make difference
                 </h4>
@@ -120,7 +133,10 @@ const Home = () => {
                 src={Quality}
                 class="img-responsive mx-auto d-block imglogo"
               />
-              <div class="container" style={{ marginTop: '30px' }}>
+              <div
+                class="container"
+                style={{ marginTop: '30px', flexDirection: 'column' }}
+              >
                 <h4 class="font-weight-normal text-dark text-left logohead">
                   Quality - Trust Us! We are doctors on wheels
                 </h4>
@@ -142,7 +158,10 @@ const Home = () => {
                 src={Swift}
                 class="img-responsive mx-auto d-block imglogo"
               />
-              <div class="container" style={{ marginTop: '30px' }}>
+              <div
+                class="container"
+                style={{ marginTop: '30px', flexDirection: 'column' }}
+              >
                 <h4 class="font-weight-normal text-dark text-left logohead">
                   Swift & affordable - Exceptional service with quick response
                 </h4>
@@ -163,7 +182,10 @@ const Home = () => {
                 src={Equipped}
                 class="img-responsive mx-auto d-block imglogo"
               />
-              <div class="container" style={{ marginTop: '30px' }}>
+              <div
+                class="container"
+                style={{ marginTop: '30px', flexDirection: 'column' }}
+              >
                 <h4 class="font-weight-normal text-dark text-left logohead">
                   Equipped Ambulance – We always dare to fight the extreme
                 </h4>
