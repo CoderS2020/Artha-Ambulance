@@ -39,6 +39,7 @@ export default function Blog() {
                 Title
               </h6>
               {/* <%=post.name%>  */}
+              Author Name
               <p class="post-prev-text pt-3">
                 {/* <%=post.content.substring(0, 100)%> */}
                 lorem issum aks dasg asdi sydiu sdhdn dnfhd sd jc s nbd ld dh jhdf
@@ -64,6 +65,7 @@ export default function Blog() {
                 Title
               </h6>
               {/* <%=post.name%>  */}
+              Author Name
               <p class="post-prev-text pt-3">
                 {/* <%=post.content.substring(0, 100)%> */}
                 lorem issum aks dasg asdi sydiu sdhdn dnfhd sd jc s nbd ld dh jhdf
