@@ -77,7 +77,7 @@ export default function Contact() {
                                     </div>
 
                                     <div class="ci-text">
-                                        Bengaluru , KA , INDIA
+                                    No - 110/332/5A,  Muneshwara Layout, Hulimavu, B. G. Road, Bengaluru - 76
                                     </div>
 
                                     <div class="ci-link">
