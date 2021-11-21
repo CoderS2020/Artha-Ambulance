@@ -9,6 +9,8 @@ import Contact from './Pages/Contact';
 import Gallery from './Pages/Gallery';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Login from './Pages/Login';
+import Admin from './Pages/Admin';
 
 export default function AppRoutes() {
   return (
@@ -23,6 +25,8 @@ export default function AppRoutes() {
         <Route path="/blog" exact element={<Blog />} />
         <Route path="/contact" exact element={<Contact />} />
         <Route path="/gallery" exact element={<Gallery />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/admin" exact element={<Admin />} />
       </Routes>
       <Footer />
     </BrowserRouter>
