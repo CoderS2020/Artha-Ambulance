@@ -1,0 +1,231 @@
+.navbar-collapse {
+    text-align: center;
+    font-family: "Raleway";
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  .logo {
+    margin-top: 0px;
+    align-items: center;
+    padding-left: 10px;
+    font-family: "Raleway", sans-serif;
+  }
+  .landing {
+    background-image: url("./assets/Landing\ Page\ -\ 10.jpg");
+    color: white;
+    background-repeat: no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100vw; */
+    background-size: cover;
+    background-position: center;
+  }
+  .heading {
+    font-size: 80px;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+  }
+  .cpara {
+    /* font-size: 30px;  */
+    font-size: 25px;
+    /* padding: 0px 30px 0px 30px;  */
+    font-family: "Coda", cursive;
+  }
+  
+  .bgcolor.scrolled {
+    background-color: white;
+  }
+  .opacity {
+    height: 350px;
+    width: 100%;
+    background-image: url("./assets/Landing\ Page\ -\ 10.jpg");
+    background-size: cover;
+  }
+  .banner {
+    background-image: url("./assets/3.jpg");
+    /* height: 185px; */
+    height: 240px;
+    display: flex;
+    align-items: center;
+  }
+  .form-div {
+    /* padding-left: 67px; */
+    padding-left: 40px;
+    padding-right: 80px;
+  }
+  .form-div input[type="name"],
+  .form-div input[type="email"],
+  .form-div input[type="phone"],
+  .form-div input[type="text"],
+  .form-div input[type="number"],
+  .form-div textarea[type="text"] {
+    -webkit-appearance: none !important;
+    border: none;
+    border-bottom: 1px solid black;
+  }
+  .form-div input[type="name"]:focus,
+  .form-div input[type="email"]:focus,
+  .form-div input[type="phone"]:focus,
+  .form-div input[type="number"]:focus,
+  .form-div input[type="text"]:focus,
+  .form-div textarea[type="text"]:focus {
+    box-shadow: none;
+    border-bottom-color: red;
+  }
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  
+  .d-flex {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cimg {
+    /* height: 600px ;  */
+    /* height: 510px; */
+    height: 70vh;
+    /* width: 100%; */
+    width: 90%;
+  }
+  .ambulancetext {
+    width: 40%;
+  }
+  .ambulanceimg {
+    width: 60%;
+  }
+  .ambulancetext h1 {
+    padding: 40px 30px;
+    margin-left: 16px;
+    font-family: "Raleway", sans-serif;
+    /* text-align: center; */
+    font-size: 30px;
+  }
+  .row {
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .col {
+    padding: 25px;
+  }
+  .row1 {
+    width: 85%;
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 900px) {
+    .cpara {
+      font-size: 22px;
+    }
+    .banner {
+      height: 350px;
+    }
+    .ambulancetext {
+      width: 50%;
+    }
+    .ambulanceimg {
+      width: 50%;
+      overflow: hidden;
+    }
+    .row1 {
+      width: 95%;
+    }
+  }
+  @media screen and (max-width: 710px) {
+    .ambulancetext h1 {
+      padding: 40px 10px;
+    }
+    .form-div {
+      padding-left: 20px;
+    }
+    .row1 {
+      width: 100%;
+    }
+    .cpara {
+      font-size: 18px;
+    }
+    .cimg {
+      height: 60vh;
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .cpara {
+      padding: 0px;
+      font-size: 19px;
+    }
+    .cimg {
+      /* height: 540px; */
+      /* height: 80vh; */
+      height: 70vh;
+      width: 100%;
+      padding: 0px 15px;
+    }
+    .banner {
+      height: 500px;
+    }
+    .form-div {
+      /* padding-left: 50px; */
+      /* padding-right: 90px; */
+      padding-left: 10px;
+      padding-right: 40px;
+    }
+    .ambulancetext {
+      width: 90%;
+    }
+    .ambulanceimg {
+      display: none;
+    }
+    .ambulancetext h1 {
+      text-align: center;
+      margin-left: 0px;
+    }
+    .col {
+      padding: 10px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .logo {
+      width: 80%;
+    }
+    .cpara {
+      padding: 5px;
+    }
+    .cimg {
+      height: 410px;
+      width: 100%;
+    }
+    .heading {
+      font-size: 51px;
+    }
+    .container-fluid .row:nth-child(1) {
+      flex-direction: column-reverse;
+      display: flex;
+      align-items: center;
+    }
+    .container-fluid .row:nth-child(2) {
+      flex-direction: column;
+    }
+    .ambulanceimg {
+      display: none;
+    }
+    .banner {
+      height: 620px;
+    }
+    .form-div {
+      padding-left: 16px;
+      padding-right: 40px;
+    }
+    .col {
+      padding: 10px;
+    }
+  }
+  
