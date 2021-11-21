@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light p-0 fontSetter">
-        <div className="d-flex logo">
+        <div className="d-flex logo" style={{ justifyContent: 'left' }}>
           <Link to="/">
             <img className="mt-2 arthaLogo" src={logo} alt="" />
           </Link>
