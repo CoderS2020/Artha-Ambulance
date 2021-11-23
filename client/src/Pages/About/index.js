@@ -6,8 +6,10 @@ import cm2 from './assets/cm2.jpg';
 import LandingPage from './assets/Landing-Page.jpg';
 import Banner3 from './assets/Banner-3.jpg';
 import '../About/about.css';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const About = () => {
+  AOS.init()
   return (
     <>
       <section
@@ -152,7 +154,7 @@ const About = () => {
                         <section class="scroll-container">
                           <div class="outer">
                               <div class="scroll-element js-scroll fade-in">
-                                  <div class="inner">
+                                  <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                       <img src={cm2} alt="animate" class="animate" />
                                   </div>
                               </div>

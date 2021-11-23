@@ -1,4 +1,7 @@
 import React from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 import LifeSupport from './assets/LifeSupport.jpg';
 import AirAmbulance from './assets/AirAmbulance.jpg';
 import BasicLifeSupport from './assets/BasicLifeSupport.jpg';
@@ -8,6 +11,7 @@ import "./animate.css"
 import './ambulance.css';
 
 export default function Ambulance() {
+  AOS.init()
   return (
     <>
       <div class="landing">
@@ -26,7 +30,7 @@ export default function Ambulance() {
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
-                            <div class="inner">
+                            <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                 
                                 <img class="img-fluid one animate" id="image" src={TransportVechicle} width="100%" alt="TransportVechicle"/>
                             </div>
@@ -36,12 +40,12 @@ export default function Ambulance() {
                 
             </div>
         </div>
-        <div class="container">
-            <div class="left animationcontainer">
+        <div class="container" >
+            <div class="left animationcontainer" >
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
-                            <div class="inner">
+                            <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                 
                                 <img class="img-fluid two " src={BasicLifeSupport} width="100% " alt="BasicLifeSupport" />
                             </div>
@@ -73,7 +77,7 @@ export default function Ambulance() {
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
-                            <div class="inner">
+                            <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                 
                                 <img class="img-fluid three" src={LifeSupport} width="100% " alt="LifeSupport" />
                             </div>
@@ -88,7 +92,7 @@ export default function Ambulance() {
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
-                            <div class="inner">
+                            <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                 
                                 <img class="img-fluid four" src={AirAmbulance} width="100% " alt="AirAmbulance" />
                             </div>
