@@ -2,7 +2,7 @@ import React from 'react';
 import WhoImg1 from './assets/Who-Img1.jpg';
 import WhoImg2 from './assets/Who-Img2.jpg';
 import WhoImg3 from './assets/Who-Img3.jpg';
-// import cm2 from './assets/cm2.jpg';
+import cm2 from './assets/cm2.jpg';
 import LandingPage from './assets/Landing-Page.jpg';
 import Banner3 from './assets/Banner-3.jpg';
 import '../About/about.css';
@@ -131,6 +131,39 @@ const About = () => {
       <div class="select" style={{ background: `url(${Banner3})` }}>
         <h1>OUR COMMITMENT</h1>
       </div>
+      <section class="page-sectionn">
+            <div class="containerr relativee">
+                <div class="rowi ours">
+                    <div class="cr">
+                        <p> To provide exceptional emergency medical services to all those who need our medical care with utmost loyalty and responsibility towards saving lives. 
+                            Our priority is always given to people who are in critical emergencies.
+                            Our staff members will be aware about your situation and will always support during emergencies to the greatest possible extent. 
+                            We ensure that the patient's condition is observed and taken care of throughout the medical transport journey. 
+                        </p>
+                        
+                        <p> We always try to succeed by providing high-quality service along with safety to all those people who choose our service. 
+                            We care for our patients and always treat them and their families with respect and care.We will serve society and people with greater importance and care. 
+                            Our mission is to rescue maximum lives around us and treat them with respect and empathy.
+                        </p>
+                    </div>
+
+                          
+                    <div class="call-action-3-images mt-xs-0 text-end">
+                        <section class="scroll-container">
+                          <div class="outer">
+                              <div class="scroll-element js-scroll fade-in">
+                                  <div class="inner">
+                                      <img src={cm2} alt="animate" class="animate" />
+                                  </div>
+                              </div>
+                          </div>
+                        </section>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
     </>
   );
 };
