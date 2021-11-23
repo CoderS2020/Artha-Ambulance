@@ -99,4 +99,62 @@ router.post('/getblogdata', async (req, res) => {
   }
 });
 
+//Save Blog
+router.post('/saveblog', async (req, res) => {
+  const { author, title, url, content } = req.body;
+
+  if (!url) {
+    return res.status(422).json({ error: 'Something went wrong!!' });
+  }
+
+  try {
+    const blogInfo = new Blog({ author, title, content, url });
+
+    await blogInfo.save();
+
+    return res.status(201).json({ message: 'Blog Saved successfully' });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//Deleting the blog
+router.post('/deleteblog', async (req, res) => {
+  const { blogid } = req.body;
+
+  try {
+    const blogData = await Blog.findByIdAndDelete({ _id: blogid });
+
+    if (blogData) {
+      return res.status(201).json('Deleted successfully!');
+    } else {
+      return res.status(400).json({ error: 'Blog not found!!' });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//Update Blog
+router.post('/updateblog', async (req, res) => {
+  const { id, author, title, url, content } = req.body;
+
+  try {
+    const blogData = await Blog.findOneAndUpdate(
+      { _id: id },
+      { author, title, content, url },
+      { new: true }
+    );
+    // User.findOneAndUpdate({ email: email }, { author, title, content, url }, { new: true });
+
+    if (blogData) {
+      return res.status(201).json('Updated successfully!');
+    } else {
+      return res.status(400).json({ error: 'Something went wrong!!' });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;

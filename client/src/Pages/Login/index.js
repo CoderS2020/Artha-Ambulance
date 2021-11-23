@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -41,7 +41,7 @@ const Login = () => {
 
   return (
     <>
-      <div className="container-fluid">
+      <div className="container-fluid" style={{ marginBottom: '5%' }}>
         <h3>Sign In</h3>
 
         <div className="form-group">

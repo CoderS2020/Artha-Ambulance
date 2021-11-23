@@ -29,16 +29,26 @@ const Admin = () => {
 
   useEffect(() => {
     callAdmin();
-  });
+  }, []);
 
   return (
     <>
-      <button>
-        <Link to="/">Compose</Link>
-      </button>
-      <button>
-        <Link to="/">Delete</Link>
-      </button>
+      <div
+        className="container row"
+        style={{ textAlign: 'center', marginBottom: '10%', marginTop: '5%' }}
+      >
+        <button style={{ margin: '2%', padding: '7px', width: '7%' }}>
+          <Link to="/compose" style={{ textDecoration: 'none' }}>
+            Compose
+          </Link>
+        </button>
+
+        <button style={{ margin: '2%', padding: '7px', width: '7%' }}>
+          <Link to="/delete" style={{ textDecoration: 'none' }}>
+            Delete
+          </Link>
+        </button>
+      </div>
     </>
   );
 };

@@ -11,6 +11,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './Pages/Login';
 import Admin from './Pages/Admin';
+import Compose from './Pages/Blog/Compose';
+import Delete from './Pages/Blog/Delete';
+import Error from './Pages/Login/Error';
+import BlogInformation from './Pages/Blog/BlogInformation';
+import EditPage from './Pages/Blog/EditPage';
 
 export default function AppRoutes() {
   return (
@@ -27,6 +32,11 @@ export default function AppRoutes() {
         <Route path="/gallery" exact element={<Gallery />} />
         <Route path="/login" exact element={<Login />} />
         <Route path="/admin" exact element={<Admin />} />
+        <Route path="/compose" exact element={<Compose />} />
+        <Route path="/delete" exact element={<Delete />} />
+
+        <Route path="/bloginfo/:id" exact element={<BlogInformation />} />
+        <Route path="/editblog/:id" exact element={<EditPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
