@@ -3,11 +3,13 @@ import Coffin from "./assets/Coffin box1.jpg";
 import Embalming from "./assets/Embalming.jpg";
 import Freezer from "./assets/freezer.jpg";
 import Funeral from "./assets/Funeral Services.jpg";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./service.css";
 import "./animate.css";
 
 export default function Services() {
+  AOS.init()
   return (
     <>
       <div
@@ -42,7 +44,7 @@ export default function Services() {
             <section class="scroll-container">
               <div class="outer">
                 <div class="scroll-element js-scroll fade-in">
-                  <div class="inner">
+                  <div class="inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-anchor-easing="ease-out-cubic">
                     <img
                       class="img-fluid one animate"
                       id="image"
@@ -61,7 +63,7 @@ export default function Services() {
             <section class="scroll-container">
               <div class="outer">
                 <div class="scroll-element js-scroll fade-in">
-                  <div class="inner">
+                  <div class="inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-anchor-easing="ease-out-cubic">
                     <img
                       class="img-fluid one animate"
                       id="image"
@@ -105,7 +107,7 @@ export default function Services() {
             <section class="scroll-container">
               <div class="outer">
                 <div class="scroll-element js-scroll fade-in">
-                  <div class="inner">
+                  <div class="inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-anchor-easing="ease-out-cubic">
                     <img
                       class="img-fluid one animate"
                       id="image"
@@ -124,7 +126,7 @@ export default function Services() {
             <section class="scroll-container">
               <div class="outer">
                 <div class="scroll-element js-scroll fade-in">
-                  <div class="inner">
+                  <div class="inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-anchor-easing="ease-out-cubic">
                     <img
                       class="img-fluid one animate"
                       id="image"
@@ -168,7 +170,7 @@ export default function Services() {
             <section class="scroll-container">
               <div class="outer">
                 <div class="scroll-element js-scroll fade-in">
-                  <div class="inner">
+                  <div class="inner" data-aos="zoom-out" data-aos-duration="3000" data-aos-anchor-easing="ease-out-cubic">
                     <img
                       class="img-fluid one animate"
                       id="image"
