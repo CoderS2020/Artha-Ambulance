@@ -356,6 +356,7 @@ li {
 }
 
 @media screen AND (max-width: 400px) {
+  
   .animate {
     height: 45vh;
     width: 90%;
@@ -365,5 +366,8 @@ li {
   }
   .heads {
     margin-left: 13px;
+  }
+  .col-sm-6{
+    width: 100%;
   }
 }

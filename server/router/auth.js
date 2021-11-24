@@ -89,7 +89,7 @@ router.get('/logout', (req, res) => {
 router.get('/getblogs', async (req, res) => {
   try {
     const allBlogs = await Blog.find();
-    console.log(allBlogs);
+    // console.log(allBlogs);
     if (allBlogs) {
       res.send(allBlogs);
     } else {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-
+import './bloginfo.css'
 const BlogInfo = () => {
   const { id } = useParams();
 
@@ -59,16 +59,23 @@ const BlogInfo = () => {
 
   const renderingBlogs = blogs.map((blog, index) => {
     return (
-      <div>
-        <p>{blog.title}</p>
-        <img src={blog.url} style={{ width: '100px' }} alt="urlBlog" />
-      </div>
+      // <div>
+      //   <p>{blog.title}</p>
+      //   <img src={blog.url} style={{ width: '100px' }} alt="urlBlog" />
+      // </div>
+      <ul>
+        <img src={blog.url} alt="urlBlog" class="latestblogimg" />
+        <a class="latesttext" href="/posts/<%=otBlog[i]._id%>">
+          <p>{blog.title}</p>
+          <p>{blog.author}</p>
+        </a>
+      </ul>
     );
   });
 
   return (
     <>
-      <div style={{ display: 'flex' }}>
+      {/* <div style={{ display: 'flex' }}>
         <div>
           <h2>{title}</h2>
           <img src={url} alt="blogImage" />
@@ -78,6 +85,17 @@ const BlogInfo = () => {
         </div>
 
         <div>{renderingBlogs}</div>
+      </div> */}
+      <div class="container">
+          <div class="left">
+            <h3 style={{textAlign: "center"}}><strong>{title}</strong></h3>
+            <img class="blogimage" src={url} alt="blogimage" />
+            <p style={{width: "100%",opacity: "0.7"}}>Written By : {author}</p>
+            <p class="font1" id="disp">{content}</p>
+          </div>
+          <div class="right">
+            {renderingBlogs}
+          </div>
       </div>
     </>
   );

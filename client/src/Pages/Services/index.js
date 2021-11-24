@@ -16,7 +16,7 @@ export default function Services() {
         class="
         container-background landing d-flex align-items-center justify-content-center"
       >
-        <h1 class="heading">OUR SERVICES</h1>
+        <h1 class="heading" style={{display:"block"}}>OUR SERVICES</h1>
       </div>
       <div
         class="container-fluid mt-2"

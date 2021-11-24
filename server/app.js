@@ -14,5 +14,5 @@ app.use(cookieParser());
 app.use(require('./router/auth')); //Making routes
 
 app.listen(PORT, (req, res) => {
-  console.log('Running');
+  console.log(`Running on port : ${PORT}`);
 });

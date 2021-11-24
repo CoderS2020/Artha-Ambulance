@@ -133,10 +133,10 @@ body {
     opacity: 1;
   }
   
-  .col-sm-6 {
+  /* .col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
-  }
+  } */
   
   .card {
     margin-bottom: 50px;
@@ -179,6 +179,9 @@ body {
   @media screen AND (max-width: 450px) {
     .col-md-3 {
       width: 96%;
+    }
+    .d-flex{
+      width: 100%;
     }
     .card {
       width: 85%;

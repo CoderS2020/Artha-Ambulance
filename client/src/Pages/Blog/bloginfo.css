@@ -1,0 +1,151 @@
+.navbar-collapse {
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    padding-bottom: 15px;
+    font-weight: bold;
+  }
+  .logo {
+    margin-top: 0px;
+    align-items: center;
+    padding-left: 10px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 100vw;
+    column-gap: 20px;
+    font-family: "Raleway", sans-serif;
+  }
+  .right {
+    width: 30%;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .left {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    padding: 20px;
+  }
+  .blogimage {
+    width: 95%;
+    margin: 20px 0px;
+  }
+  .latestblogimg {
+    width: 40%;
+    max-height: 85px;
+  }
+  .right ul {
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin: 0px;
+    column-gap: 15px;
+  }
+  .right h3 {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0px;
+  }
+  .latesttext {
+    text-decoration: none;
+    color: inherit;
+  }
+  .latesttext:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .latesttext p:first-child {
+    font-size: 20px;
+  }
+  .latesttext p:nth-child(2) {
+    font-size: 15px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    .latesttext p:first-child {
+      font-size: 18px;
+    }
+    .latesttext p:nth-child(2) {
+      font-size: 14px;
+    }
+  }
+  
+  @media screen and (max-width: 700px) {
+    .container {
+      column-gap: 15px;
+    }
+    .right {
+      width: 35%;
+      padding: 6px;
+    }
+    .left {
+      width: 65%;
+      padding: 15px;
+    }
+    .latestblogimg {
+      width: 35%;
+      max-height: 70px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .container {
+      flex-direction: column;
+    }
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+      flex-direction: row;
+      align-items: start;
+    }
+    .right ul {
+      width: 30%;
+      display: inline-flex;
+      flex-wrap: wrap;
+      margin-left: 10px;
+    }
+    .latesttext {
+      height: 50%;
+    }
+    .latestblogimg {
+      width: 95%;
+      height: 50%;
+      max-height: 75px;
+    }
+    .latesttext p:first-child {
+      font-size: 16px;
+    }
+    .latesttext p:nth-child(2) {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 460px){
+      .container:nth-child(even) {
+        flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 430px) {
+    .logo {
+      width: 80%;
+    }
+    .blogimage {
+      width: 100%;
+    }
+    .right ul {
+      width: 45%;
+    }
+    .latestblogimg {
+      width: 98%;
+      max-height: 80px;
+    }
+  }
+  

@@ -173,10 +173,10 @@ input[type="number"] {
 } */
 
 
-.col-sm-6 {
+/* .col-sm-6 {
     flex: 0 0 auto;
     width: 50%
-}
+} */
 
 
 .col-lg-4 {
@@ -699,9 +699,9 @@ input[type="number"] {
 	.ci-text{
 		font-size: 20px;
 	}
-	.d-flex{
+	/* .d-flex{
 		width: 30%;
-	}
+	} */
 	.text-end{
 		height: 60px;
 	}

@@ -207,13 +207,13 @@
       font-size: 51px;
     }
     .container-fluid .row:nth-child(1) {
-      flex-direction: column-reverse;
+      /* flex-direction: column-reverse; */
       display: flex;
       align-items: center;
     }
-    .container-fluid .row:nth-child(2) {
+    /* .container-fluid .row:nth-child(2) {
       flex-direction: column;
-    }
+    } */
     .ambulanceimg {
       display: none;
     }

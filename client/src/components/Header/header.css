@@ -1,7 +1,9 @@
 .fontSetter {
   font-family: 'Raleway';
 }
-
+.logo{
+  width: 60%;
+}
 .headerLogo {
   margin-left: 7px;
   margin-top: -3px;
