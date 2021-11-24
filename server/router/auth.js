@@ -2,10 +2,22 @@ const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 const authenticate = require('../middleware/authenticate');
+const nodemailer = require('nodemailer');
 
 require('../db/connection');
 const User = require('../model/userSchema');
 const Blog = require('../model/blogSchema');
+const Corporate = require('../model/corporateSchema');
+const Contact = require('../model/contactSchema');
+
+//For sending emails
+let transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD,
+  },
+});
 
 router.get('/', (req, res) => {
   res.send('Hello from auth');
@@ -53,7 +65,7 @@ router.post('/login', async (req, res) => {
       const token = await userLogin.generateAuthToken();
       // console.log(token);
       res.cookie('artha', token, {
-        expires: new Date(Date.now() + 3600),
+        expires: new Date(Date.now() + 100000000),
         httpOnly: true,
       });
       return res.status(200).json({ message: 'User signed in successfully' });
@@ -66,6 +78,11 @@ router.post('/login', async (req, res) => {
 router.get('/admin', authenticate, (req, res) => {
   console.log('admin page');
   res.send(req.rootUser);
+});
+
+router.get('/logout', (req, res) => {
+  res.clearCookie('artha', { path: '/' });
+  res.status(200).send('Admin is logged out!!');
 });
 
 //Get all blogs
@@ -152,6 +169,104 @@ router.post('/updateblog', async (req, res) => {
     } else {
       return res.status(400).json({ error: 'Something went wrong!!' });
     }
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//Corporate page form
+router.post('/corporatedetails', async (req, res) => {
+  const { name, email, phone, company, position, requirement } = req.body;
+
+  if (!email || !phone || !name || !company || !position || !requirement) {
+    return res.status(422).json({ error: 'Please fill all the details...' });
+  }
+
+  try {
+    const corporateInfo = new Corporate({
+      name,
+      email,
+      phone,
+      company,
+      position,
+      requirement,
+    });
+
+    await corporateInfo.save();
+
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: 'Corporate Page - Artha Ambulance',
+      html: `
+      <h2>Following are the details of corporate page form submission"-</h2> <br/>
+      Name:-${name} <br/>
+      Email:-${email}<br/>
+      Phone:-${phone}<br/>
+      Company:-${company}<br/>
+      Position:-${position}<br/>
+      Requirement:-${requirement}<br/>
+
+      `,
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+      if (err) {
+        console.log('Error sending message: ' + err);
+      } else {
+        // no errors, it worked
+        console.log('Message sent succesfully.');
+      }
+    });
+
+    return res.status(201).json({ message: 'You contacted us successfully' });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+//Contact Page form
+router.post('/contactdetails', async (req, res) => {
+  const { name, email, phone, message } = req.body;
+  console.log(name, email, phone, message);
+
+  if (!email || !phone || !name || !message) {
+    return res.status(422).json({ error: 'Please fill all the details...' });
+  }
+
+  try {
+    const contactInfo = new Contact({
+      name,
+      email,
+      phone,
+      message,
+    });
+
+    await contactInfo.save();
+
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: 'Contact Page - Artha Ambulance',
+      html: `
+      <h2>Following are the details of contact page form submission"-</h2> <br/>
+      Name:-${name} <br/>
+      Email:-${email}<br/>
+      Message:-${message}<br/>
+      
+      `,
+    };
+
+    transporter.sendMail(mailOptions, function (err, info) {
+      if (err) {
+        console.log('Error sending message: ' + err);
+      } else {
+        // no errors, it worked
+        console.log('Message sent succesfully.');
+      }
+    });
+
+    return res.status(201).json({ message: 'You contacted us successfully' });
   } catch (error) {
     console.log(error);
   }

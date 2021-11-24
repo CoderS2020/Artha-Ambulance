@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -11,6 +11,32 @@ const Login = () => {
     setUser({ ...user, [name]: value });
     console.log(user);
     e.preventDefault();
+  };
+
+  const callAdmin = async () => {
+    try {
+      const res = await fetch('/admin', {
+        method: 'GET',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+      });
+
+      const data = res.json();
+      console.log(data);
+
+      if (res.status !== 200) {
+        const error = new Error(res.error);
+        throw error;
+      }
+      if (res.status === 200) {
+        navigate('/admin');
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const submitData = async (e) => {
@@ -32,13 +58,15 @@ const Login = () => {
     if (res.status === 422 || res.status === 400 || !data) {
       window.alert('Invalid Credentials');
     } else {
-      console.log('Suss');
       console.log(res);
       window.alert('Successfull logged in');
       navigate('/admin');
     }
   };
 
+  useEffect(() => {
+    callAdmin();
+  }, []);
   return (
     <>
       <div className="container-fluid" style={{ marginBottom: '5%' }}>

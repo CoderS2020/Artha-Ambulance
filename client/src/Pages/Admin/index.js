@@ -27,6 +27,30 @@ const Admin = () => {
     }
   };
 
+  const logout = async () => {
+    fetch('/logout', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    })
+      .then((res) => {
+        navigate('/login');
+        if (res.status !== 200) {
+          const error = new Error(res.error);
+          throw error;
+        }
+        if (res.status === 200) {
+          window.alert('Logged out successfully...');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   useEffect(() => {
     callAdmin();
   }, []);
@@ -34,20 +58,36 @@ const Admin = () => {
   return (
     <>
       <div
-        className="container row"
-        style={{ textAlign: 'center', marginBottom: '10%', marginTop: '5%' }}
+        className="container "
+        style={{ marginBottom: '15%', marginTop: '5%' }}
       >
-        <button style={{ margin: '2%', padding: '7px', width: '7%' }}>
-          <Link to="/compose" style={{ textDecoration: 'none' }}>
+        <Link to="/compose" style={{ textDecoration: 'none', color: 'black' }}>
+          <button
+            className="btn btn-primary"
+            style={{ margin: '2%', padding: '7px' }}
+          >
             Compose
-          </Link>
-        </button>
+          </button>
+        </Link>
 
-        <button style={{ margin: '2%', padding: '7px', width: '7%' }}>
-          <Link to="/delete" style={{ textDecoration: 'none' }}>
-            Delete
-          </Link>
-        </button>
+        <Link to="/delete" style={{ textDecoration: 'none' }}>
+          <button
+            className="btn btn-primary"
+            style={{ margin: '2%', padding: '7px' }}
+          >
+            Delete / Edit
+          </button>
+        </Link>
+
+        <Link to="/login" style={{ textDecoration: 'none' }}>
+          <button
+            className="btn btn-primary"
+            style={{ margin: '2%', padding: '7px' }}
+            onClick={logout}
+          >
+            Logout
+          </button>
+        </Link>
       </div>
     </>
   );

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Compose = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const [content, setContent] = useState('');
@@ -57,8 +59,39 @@ const Compose = () => {
     // }
   };
 
+  const logout = async () => {
+    fetch('/logout', {
+      method: 'GET',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+    })
+      .then((res) => {
+        navigate('/login');
+        if (res.status !== 200) {
+          const error = new Error(res.error);
+          throw error;
+        }
+        if (res.status === 200) {
+          window.alert('Logged out successfully...');
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
   return (
     <>
+      <button
+        className="btn btn-primary"
+        style={{ marginLeft: '85%', padding: '7px', width: '7%' }}
+        onClick={logout}
+      >
+        Logout
+      </button>
       <div className="container-fluid">
         <div className="form-group">
           <label>Add Image</label>
