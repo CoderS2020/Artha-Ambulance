@@ -63,7 +63,7 @@ h6 {
   left: -30px;
 }
 
-.banner {
+.banner12 {
   background-image: url('./assets/Banner-3.jpg');
   height: 185px;
   max-width: 100%;
@@ -72,7 +72,7 @@ h6 {
   align-items: center;
   justify-content: center;
 }
-.banner h2 {
+.banner12 h2 {
   font-size: 60px;
   font-family: 'Raleway', sans-serif;
   text-align: center;
@@ -155,7 +155,7 @@ h6 {
   .homeland img {
     height: 85vh;
   }
-  .banner h2 {
+  .banner12 h2 {
     font-size: 40px;
   }
   .caption {

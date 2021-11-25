@@ -59,7 +59,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div class="p-3 mb-2 text-white banner">
+      <div class="p-3 mb-2 text-white banner12">
         <h2 class="font-weight-normal">SEE WHAT WE CAN DO FOR YOU</h2>
       </div>
       <div class="container-fluid ">
@@ -96,7 +96,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="p-3 mb-2 mt-3 bg-danger text-white banner">
+      <div class="p-3 mb-2 mt-3 bg-danger text-white banner12">
         <h2 class="text-center font-weight-normal "> WHAT WE PROVIDE</h2>
       </div>
       <div class="container-fluid">
