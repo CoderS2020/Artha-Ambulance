@@ -111,7 +111,7 @@ export default function Contact() {
         <div className="relative">
           <div className="row mb-60 mb-xs-40">
             <div className="col-md-12 offset-md-1" style={{paddingLeft:"0px"}}>
-              <div className="row">
+              <div className="row contactpadding">
                 <div className="col-sm-6 col-lg-4 pb-20">
                   <div
                     className="contact-item wow fadeScaleIn"

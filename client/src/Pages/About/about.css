@@ -413,6 +413,8 @@ p {
   font-size: 1.25em;
   text-transform: uppercase;
   font-weight: bold;
+  color: black;
+  text-align: left;
 }
 .ft-item p {
   /* font-size: 17px; */
@@ -486,7 +488,7 @@ p {
     width: 80%;
   }
   .section-text p {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     width: 80%;
   }
   .num {
@@ -551,7 +553,11 @@ p {
   .call-action-3-image-2 {
     height: 250px;
   }
+  .displaynone{
+    display: none;
+  }
   .num {
-    margin-left: 4%;
+    /* margin-left: 4%; */
+    margin-left: 0px;
   }
 }

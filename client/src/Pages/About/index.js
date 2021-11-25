@@ -150,9 +150,9 @@ const About = () => {
                     </div>
 
                           
-                    <div class="call-action-3-images mt-xs-0 text-end">
+                    <div class="text-end call-action-3-images mt-xs-0 ">
                         <section class="scroll-container">
-                          <div class="outer">
+                          <div class="outer displaynone">
                               <div class="scroll-element js-scroll fade-in">
                                   <div class="inner" data-aos="zoom-out" data-aos-duration="2000" data-aos-anchor-easing="ease-out-cubic">
                                       <img src={cm2} alt="animate" class="animate" />

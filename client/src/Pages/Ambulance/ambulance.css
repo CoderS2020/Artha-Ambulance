@@ -30,6 +30,9 @@ body {
   background-position: center;
 }
 
+/* .container1 .left,.container1 .right{
+  width: 50%;
+} */
 .col-md-12 {
   column-width: fixed;
   float: left;
@@ -133,9 +136,9 @@ p {
   padding-left: 10px;
   font-family: "Raleway", sans-serif;
 }
-.container {
-  /* width: 100%; */
-  width: 95%;
+.container1 {
+  width: 100%;
+  /* width: 95%; */
   display: flex;
   justify-content: space-evenly;
   max-width: 100%;
@@ -145,13 +148,13 @@ p {
 .paragraph {
   width: 80%;
 }
-.left {
+.ambuleft {
   width: 48%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.right {
+.amburight {
   width: 48%;
   justify-content: center;
   display: flex;
@@ -191,14 +194,14 @@ p {
   .four {
     height: 55vh;
   }
-  .container {
+  .container1 {
     width: 100%;
   }
   .paragraph {
     width: 95%;
   }
-  .right,
-  .left {
+  .amburight,
+  .ambuleft {
     width: 50%;
   }
   .outer {
@@ -226,7 +229,7 @@ p {
     font-size: 30px;
   }
   p {
-    font-size: 13px;
+    font-size: 17px;
   }
   #image,
   .one,
@@ -235,8 +238,8 @@ p {
   .four {
     height: 50vh;
   }
-  .right,
-  .left {
+  .amburight,
+  .ambuleft {
     width: 48%;
   }
 }
@@ -248,20 +251,20 @@ p {
   .heading {
     font-size: 50px;
   }
-  .left {
+  .ambuleft {
     width: 100%;
   }
-  .right {
+  .amburight {
     width: 100%;
   }
-  .container {
+  .container1 {
     flex-direction: column;
   }
 
   .scroll-container {
     width: 80%;
   }
-  .container:nth-child(even) {
+  .container1:nth-child(even) {
     flex-direction: column-reverse;
   }
   .paragraph {

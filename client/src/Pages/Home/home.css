@@ -169,7 +169,10 @@ h6 {
   }
 }
 @media screen and (max-width: 500px) {
-  .col:nth-child(2) {
+  /* .col:nth-child(2) {
+    display: none;
+  } */
+  .displaynone{
     display: none;
   }
   .d-flex {
@@ -201,14 +204,19 @@ h6 {
   }
   .homeland {
     /* height: 80vh; */
-    height: 46vh;
+    height: 60vh;
   }
   .homeland img {
     /* height: 80vh; */
-    height: 35vh;
+    height: 55vh;
     transform: scale(1.8);
   }
   .card-img-overlay {
-    top: 25vh;
+    /* top: 25vh; */
+    top: 15vh;
+    /* left: -5vw; */
+  }
+  .container-fluid .row:nth-child(1){
+    margin-left: 0px;
   }
 }

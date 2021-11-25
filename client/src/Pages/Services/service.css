@@ -335,14 +335,18 @@ li {
     /* align-items: center; */
     align-items: flex-start;
   }
-  .row:nth-child(even) {
+  /* .row:nth-child(even) {
     flex-direction: column-reverse;
-  }
+  } */
   .scroll-element {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
   }
+  .evencount{
+    flex-direction: column-reverse;
+  }
+  
   .scroll-container {
     height: 50vh;
   }

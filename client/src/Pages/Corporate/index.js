@@ -63,7 +63,7 @@ export default function Corporate() {
   return (
     <>
       <div className="landing">
-        <h1 className="heading">OUR SERVICES TO CORPORATE</h1>
+        <h1 className="heading" style={{display:"block"}}>OUR SERVICES TO CORPORATE</h1>
       </div>
       <div
         className="container-fluid"
@@ -75,7 +75,7 @@ export default function Corporate() {
         }}
       >
         <div className="row row1">
-          <div className="col">
+          <div className="col textcolumncorporate">
             <br />
             <div className="container-fluid">
               <h2 className="d-flex font-weight-normal cpara">
@@ -90,19 +90,19 @@ export default function Corporate() {
               </h2>
             </div>
           </div>
-          <div className="col">
+          <div className="col imagecolumncorporate">
             <div className="d-flex">
               <img className="ml-auto mt-3 cimg" src={Image4} alt="img" />
             </div>
           </div>
         </div>
         <div className="row row1">
-          <div className="col">
+          <div className="col imagecolumncorporate">
             <div className="d-flex">
               <img className="mb-3 cimg" src={Image5} alt="img" />
             </div>
           </div>
-          <div className="col">
+          <div className="col textcolumncorporate">
             <h2 className="d-flex font-weight-normal cpara">
               At Artha Ambulance Services, we serve companies by providing a
               fully equipped ambulance along with a professional driver and a

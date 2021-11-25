@@ -7,7 +7,7 @@ import AirAmbulance from './assets/AirAmbulance.jpg';
 import BasicLifeSupport from './assets/BasicLifeSupport.jpg';
 import TransportVechicle from './assets/TransportVehicle.jpg';
 
-import "./animate.css"
+// import "./animate.css"
 import './ambulance.css';
 
 export default function Ambulance() {
@@ -15,18 +15,18 @@ export default function Ambulance() {
   return (
     <>
       <div class="landing">
-            <h1 class="heading">OUR AMBULANCES</h1>
+            <h1 class="heading" style={{display:"block"}}>OUR AMBULANCES</h1>
         </div>
     <div class="container-fluid ">
-        <div class="container">
-            <div class=" left ">
+        <div class="container1">
+            <div class=" ambuleft ">
                 <div class=" paragraph">
                     <h2 class="font_8 ">PATIENT TRANSPORT VEHICLE </h2>
                     <p class=" ">The Patient Transport Vehicles are used to transport patients who are in stable condition and do not require much medical attentation. This ambulance helps to transfer patients to and from medical facilities in non-emergency situations
                         and this vehicle can be used for patients who no longer require specialized care (Mainly Stretcher and Wheelchair cases). </p>
                 </div>
             </div>
-            <div class="right animationcontainer">
+            <div class="amburight animationcontainer">
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
@@ -40,8 +40,8 @@ export default function Ambulance() {
                 
             </div>
         </div>
-        <div class="container" >
-            <div class="left animationcontainer" >
+        <div class="container1" >
+            <div class="ambuleft animationcontainer" >
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
@@ -55,7 +55,7 @@ export default function Ambulance() {
                 
             </div>
 
-            <div class=" right ">
+            <div class=" amburight ">
                 <div class="paragraph ">
                     <h2 class=" font_8 ">BASIC LIFE SUPPORT</h2>
                     <p class="">The Basic Life Support Vehicles are essentially used to provide basic medicle care to those people who are in non-life-threatening situations.They are not equipped to sustain critical emergencies for a prolonged duration. These vehicles
@@ -64,8 +64,8 @@ export default function Ambulance() {
             </div>
         </div>
 
-        <div class="container ">
-            <div class="left ">
+        <div class="container1 ">
+            <div class="ambuleft ">
                 <div class="paragraph ">
                     <h2 class="font_8 ">ADVANCED LIFE SUPPORT</h2>
                     <p class="">The Advanced Life Support Vehicles are equipped to provide emergency service for urgent prehospital treatement and stabilization during serious emergencies and to transport the patients to definitive care. These ambulances are mainly
@@ -73,7 +73,7 @@ export default function Ambulance() {
                     </p>
                 </div>
             </div>
-            <div class="right animationcontainer">
+            <div class="amburight animationcontainer">
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
@@ -87,8 +87,8 @@ export default function Ambulance() {
                 
             </div>
         </div>
-        <div class="container">
-            <div class="left animationcontainer">
+        <div class="container1">
+            <div class="ambuleft animationcontainer">
                 <section class="scroll-container">
                     <div class="outer">
                         <div class="scroll-element js-scroll fade-in">
@@ -101,7 +101,7 @@ export default function Ambulance() {
                 </section>
                 
             </div>
-            <div class=" right">
+            <div class=" amburight">
                 <div class="paragraph ">
                     <h2 class=" font_8 ">AIR AMBULANCE </h2>
                     <p class="">We support by dispensing Air ambulance services focused mainly on offering emergency air care services globally. These services are useful in treating emergencires where patients need extremely important medical care which is not within

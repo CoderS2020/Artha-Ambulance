@@ -5,8 +5,9 @@ import Freezer from "./assets/freezer.jpg";
 import Funeral from "./assets/Funeral Services.jpg";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import "./service.css";
 import "./animate.css";
+import "./service.css";
+
 
 export default function Services() {
   AOS.init()
@@ -58,7 +59,7 @@ export default function Services() {
             </section>
           </div>
         </div>
-        <div class="row row1">
+        <div class="row row1 evencount">
           <div class="col-md-6 col-sm-6 imgcont">
             <section class="scroll-container">
               <div class="outer">
@@ -121,7 +122,7 @@ export default function Services() {
             </section>
           </div>
         </div>
-        <div class="row row1">
+        <div class="row row1 evencount">
           <div class="col-md-6 col-sm-6 imgcont">
             <section class="scroll-container">
               <div class="outer">

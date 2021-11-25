@@ -20,7 +20,8 @@ const Home = () => {
                 style={{
                   fontFamily: 'Raleway',
                   textAlign: 'left',
-                  fontSize: '80px',
+                  // fontSize: '80px',
+                  display:"block",
                   color: 'red',
                 }}
               >
@@ -88,7 +89,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div class="col">
+          <div class="col displaynone">
             <div class="d-flex" style={{ width: '100%' }}>
               <img class="p-6 mt-2" src={cardImage2} alt="img" />
             </div>

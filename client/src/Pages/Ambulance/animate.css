@@ -49,7 +49,9 @@
 .scrolled.fade-in {
     animation: fade-in 1s ease-in-out both;
 }
-
+.container1{
+    display: flex;
+}
 @keyframes fade-in {
     0% {
         opacity: 1;
