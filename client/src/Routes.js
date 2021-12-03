@@ -37,6 +37,7 @@ export default function AppRoutes() {
 
         <Route path="/bloginfo/:id" exact element={<BlogInformation />} />
         <Route path="/editblog/:id" exact element={<EditPage />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>
